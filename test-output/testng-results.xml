@@ -1,63 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-05T00:18:11 IST" name="Default suite" finished-at="2025-08-05T00:18:34 IST" duration-ms="23222">
+  <suite started-at="2025-08-08T12:02:19 IST" name="Command line suite" finished-at="2025-08-08T12:02:56 IST" duration-ms="37841">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.big.TestRunners.CucumberRunner@24f43aa3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.big.TestRunners.CucumberRunner@319988b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-05T00:18:11 IST" name="Default test" finished-at="2025-08-05T00:18:34 IST" duration-ms="23222">
+    <test started-at="2025-08-08T12:02:19 IST" name="Command line test" finished-at="2025-08-08T12:02:56 IST" duration-ms="37841">
       <class name="com.big.TestRunners.CucumberRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.big.TestRunners.CucumberRunner@24f43aa3]" started-at="2025-08-05T00:18:11 IST" name="setUpClass" finished-at="2025-08-05T00:18:11 IST" duration-ms="408" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.big.TestRunners.CucumberRunner@319988b0]" started-at="2025-08-08T12:02:19 IST" name="setUpClass" finished-at="2025-08-08T12:02:19 IST" duration-ms="527" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4822ab4d]]>
+                <![CDATA[org.testng.TestRunner@2fcffc05]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.big.TestRunners.CucumberRunner@24f43aa3]" started-at="2025-08-05T00:18:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-05T00:18:23 IST" duration-ms="11389" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.big.TestRunners.CucumberRunner@319988b0]" started-at="2025-08-08T12:02:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-08T12:02:56 IST" duration-ms="37118" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User navigates to Home tab"]]>
+                <![CDATA["Assign Underwriter and UW Team"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["This feature file allow user to Search CaseNumber"]]>
+                <![CDATA["Assign Underwriter and Underwriter Team"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.big.TestRunners.CucumberRunner@24f43aa3]" started-at="2025-08-05T00:18:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-05T00:18:34 IST" duration-ms="11324" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User navigates to Home Page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["This feature file allow user to login to application"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.big.TestRunners.CucumberRunner@24f43aa3]" started-at="2025-08-05T00:18:34 IST" name="tearDownClass" finished-at="2025-08-05T00:18:34 IST" duration-ms="67" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.big.TestRunners.CucumberRunner@319988b0]" started-at="2025-08-08T12:02:56 IST" name="tearDownClass" finished-at="2025-08-08T12:02:56 IST" duration-ms="146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.big.TestRunners.CucumberRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>

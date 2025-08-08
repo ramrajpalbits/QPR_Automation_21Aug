@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.big.pageObjects.AMS_Actions;
 import com.big.pageObjects.CommonObj;
+import com.big.pageObjects.HomePage_Actions;
 import com.big.pageObjects.QPRLogin_Actions;
 import com.big.utils.Utilities;
 
@@ -24,6 +25,7 @@ public class QPRAppainLogin {
 	Utilities ut = new Utilities();
 	CommonObj co = new CommonObj();
 	QPRLogin_Actions qprActionObj = new QPRLogin_Actions();
+	HomePage_Actions homeActionObj = new HomePage_Actions();
 	
 	
 	@Given("User login to Appian application as {string}")
@@ -41,8 +43,9 @@ public class QPRAppainLogin {
 
 			
 	@Then("User should see the Reinsurance text")
-	public void user_should_see_the_reinsurance_text() {
-		qprActionObj.verifyreInsuranceText();
+	public void user_should_see_the_reinsurance_text() throws InterruptedException {
+		homeActionObj.verifyreInsuranceText();
+
 	}
 
 	  
