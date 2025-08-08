@@ -13,6 +13,7 @@ import java.util.Set;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
@@ -227,6 +228,8 @@ public class TestReusables {
 	
 	public void keybordentry(String key) {
 		try {
+
+			
 			Robot rb = new Robot();
 			if(key.equalsIgnoreCase("Enter")) {
 			rb.keyPress(KeyEvent.VK_ENTER);
@@ -330,7 +333,7 @@ public class TestReusables {
 		}
 	}
 	
-	public void clickUnsingJS(WebElement ele, String eleName) {
+	public void clickUsingJS(WebElement ele, String eleName) {
 		try {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOf(ele));
@@ -407,15 +410,17 @@ public class TestReusables {
 		}
 	}
 	
-
-	/*
-	 * public void scrolltoElement(List<WebElement> ele) { try { WebDriverWait wait
-	 * = new WebDriverWait(driver,Duration.ofSeconds(30));
-	 * wait.until(ExpectedConditions.visibilityOfAllElements(ele));
-	 * driver.executeScript("arguments[0].scrollIntoView();", ele); } catch
-	 * (Exception e) { e.printStackTrace(); }
-	 */
-	//}
+	
+	public void scrolltoElements (List<WebElement> ele) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+			wait.until(ExpectedConditions.visibilityOfAllElements(ele));
+			driver.executeScript("arguments[0].scrollIntoView();", ele);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 	
 	public Set<String> getWindowHandles() {
@@ -578,5 +583,34 @@ public class TestReusables {
     }
 	
 	
-   
+	
+	public void selectCustomDropdownValue(By dropdownValueLocator,
+            By optionsContainerLocator,
+            String valueToSelect) {
+// 1. Click to open the dropdown
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		 WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(dropdownValueLocator));
+		 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdown);
+		 dropdown.click();
+
+// 2. Wait for options container to be visible
+		 List<WebElement> options = wait.until(
+				 ExpectedConditions.visibilityOfAllElementsLocatedBy(optionsContainerLocator)
+				 );
+
+// 3. Loop through options and click the one with matching visible text
+		 for (WebElement option : options) {
+			 if (option.getText().trim().equalsIgnoreCase(valueToSelect)) {
+				 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", option);
+				 option.click();
+				 return;
 }
+}
+}
+	
+	
+}
+	
+	
+   
+
