@@ -44,10 +44,10 @@ public class CommonObj extends TestReusables{
 	@FindBy(xpath="//input[@id='txtUserID']")
 	WebElement username; 
 	
-	@FindBy(xpath="//*[@id=\"un\"]")
+	@FindBy(xpath="//*[@id='un']")
 	WebElement appianusername; 
 	
-	@FindBy(xpath="//*[@id=\"pw\"]")
+	@FindBy(xpath="//*[@id='pw']")
 	WebElement appianpassword;
 	
 	@FindBy(xpath="//input[@value='Sign In']")
@@ -123,9 +123,9 @@ public class CommonObj extends TestReusables{
 	@FindBy(xpath="//tbody//tr//td//div//p//a")
 	List<WebElement> CaseIDlinks;
 	
-	@FindBy(xpath="//div[@class='TabButtonGroup---tab_button_group TabButtonGroup---margin_above_none']//ul//li//a")
+	@FindBy(xpath="//div[@class='TabButtonWidget---tab_label']")
 	List<WebElement> CaseMenuOptions;
-	
+		
 	@FindBy(xpath="//div[@class='MultiColumnLayout---column_layout MultiColumnLayout---margin_below_standard MultiColumnLayout---margin_above_none MultiColumnLayout---stack_when_phone']//p[@class='ParagraphText---richtext_paragraph ParagraphText---default_direction ParagraphText---align_start elements---global_p']")
 	List<WebElement> ParagraphTabs;
 	
@@ -433,7 +433,8 @@ Thread.sleep(5000);
 
 	public void user_navigate_to_casemenu(String caseMenu) {
 		 for (WebElement casemenu : CaseMenuOptions) {
-	            if (casemenu.getText().equalsIgnoreCase(caseMenu)) {
+			 System.out.println(casemenu);
+	            if (casemenu.getText().trim().equalsIgnoreCase(caseMenu)) {
 	            	System.out.println("CaseMenu: "+ casemenu.getText());
 	            	click(casemenu, "caseMenu"); 
 	                break;  
@@ -444,7 +445,8 @@ Thread.sleep(5000);
 
 	public void user_navigate_to_paragraphtabs(String paragraphTab) {
 		 for (WebElement ParagraphTab : ParagraphTabs) {
-	            if (ParagraphTab.getText().equalsIgnoreCase(paragraphTab)) {
+			 System.out.println(ParagraphTab);
+	            if (ParagraphTab.getText().trim().equalsIgnoreCase(paragraphTab)) {
 	            	System.out.println("paragraphTab: "+ ParagraphTab.getText());
 	            	click(ParagraphTab, "paragraphTab"); 
 	                break;  

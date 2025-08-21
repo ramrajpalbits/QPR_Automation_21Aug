@@ -16,10 +16,10 @@ public class CaseNumber {
 		System.out.println("Hello1");
 	}
 
-	@When("User navigate to {string} paragraphtab")
-	public void user_navigate_to_paragraphtab(String string) {
-		System.out.println("Hello2");
-	}
+//	@When("User navigate to {string} paragraphtab")
+//	public void user_navigate_to_paragraphtabs(String string) {
+//		System.out.println("Hello2");
+//	}
 
 	@When("User selects {string} of case")
 	public void user_selects_of_case(String string) {

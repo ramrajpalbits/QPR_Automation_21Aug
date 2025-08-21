@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
 features = {"src/test/java/com/big/features"},
 glue={"com.big.stepdef"},
 monochrome = true,
-tags = "@AssignUnderwriter", 
+tags = "@Appianauth and @SendandVerifyAuthorizationEmail", 
 
 dryRun = false
 )
